@@ -56,3 +56,29 @@ function submitFeedback() {
 
 // Add event listener to the feedback form for form submission. Added an event listener to the feedback form, listening for the 'submit' event. When the form is submitted, the validateFeedbackForm function is called.
 feedbackForm.addEventListener('submit', validateFeedbackForm);
+
+
+// Function to generate random startup ideas
+function generateStartupIdeas() {
+    const startupIdeas = [
+        'An app for tracking personal fitness goals',
+        'A platform for connecting freelance designers with clients',
+        'A subscription box service for exotic spices',
+        'An online marketplace for handmade crafts',
+        'A virtual event planning tool for businesses',
+        'A mobile game that teaches coding skills'
+    ];
+
+    // Clear existing ideas
+    ideaList.innerHTML = '';
+
+    // Generate and display new startup ideas
+    startupIdeas.forEach(idea => {
+        const listItem = document.createElement('li');
+        listItem.textContent = idea;
+        ideaList.appendChild(listItem);
+    });
+}
+
+// Generate startup ideas when the page loads
+window.addEventListener('load', generateStartupIdeas);
