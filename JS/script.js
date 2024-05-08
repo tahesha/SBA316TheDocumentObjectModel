@@ -33,3 +33,26 @@ startupIdeas.forEach(idea => {
     ideaList.appendChild(listItem);
 });
 
+
+// Function to validate the feedback form. Defined a function 'validateFeedbackForm' to handle form submission. This function prevents the default form submission behavior, validates the name, email, and message inputs, and calls the submitFeedback function if all inputs are valid.
+function validateFeedbackForm(event) {
+    event.preventDefault(); // Prevent form submission
+    // Validate name, email, and message inputs
+    if (nameInput.value.trim() === '' || emailInput.value.trim() === '' || messageInput.value.trim() === '') {
+        alert('Please fill out all fields.');
+        return;
+    }
+    // Submit feedback if all inputs are valid. The 'submitFeedback' function displays a success message and resets the form inputs.
+    submitFeedback();
+}
+
+// Function to submit feedback
+function submitFeedback() {
+    // Display a success message
+    alert('Feedback submitted successfully!');
+    // Reset the form inputs
+    feedbackForm.reset();
+}
+
+// Add event listener to the feedback form for form submission. Added an event listener to the feedback form, listening for the 'submit' event. When the form is submitted, the validateFeedbackForm function is called.
+feedbackForm.addEventListener('submit', validateFeedbackForm);
