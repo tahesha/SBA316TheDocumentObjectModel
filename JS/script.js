@@ -85,3 +85,23 @@ window.addEventListener('load', generateStartupIdeas);
 
 // Cache the footer element using querySelector
 const footer = document.querySelector('footer');
+
+//Modify the styles and/or CSS.....
+// Function to handle idea selection and highlighting
+function selectIdea(event) {
+    // Remove the 'selected' class from all ideas
+    const allIdeas = document.querySelectorAll('#idea-list li');
+    allIdeas.forEach(idea => {
+        idea.classList.remove('selected');
+    });
+    
+    // Add the 'selected' class to the clicked idea
+    const selectedIdea = event.currentTarget;
+    selectedIdea.classList.add('selected');
+}
+
+// Add event listeners to each idea to handle selection
+const ideas = document.querySelectorAll('#idea-list li');
+ideas.forEach(idea => {
+    idea.addEventListener('click', selectIdea);
+});
