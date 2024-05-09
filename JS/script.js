@@ -82,3 +82,6 @@ function generateStartupIdeas() {
 
 // Generate startup ideas when the page loads
 window.addEventListener('load', generateStartupIdeas);
+
+// Cache the footer element using querySelector
+const footer = document.querySelector('footer');
