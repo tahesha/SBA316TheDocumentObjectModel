@@ -1,3 +1,45 @@
 .selected {
-    background-color: goldenrod; /* Change this to the desired highlight color */
+    background-color: yellow; /* I can change this to the desired highlight color. May add a feature where user can do so. */
+}
+
+body{
+    background-color: rgb(145, 243, 243);
+}
+/* styles.css */
+
+/* Add styles for the form */
+#feedback-form {
+    display: flex;
+    flex-direction: column; /* Display form elements in a column */
+    gap: 10px; /* Add some spacing between elements */
+}
+
+/* Style the form inputs and labels */
+#feedback-form label {
+    font-weight: bold;
+}
+
+#feedback-form input[type="text"],
+#feedback-form input[type="email"],
+#feedback-form textarea {
+    width: 50%; /* Make inputs fill half the width of the container */
+    padding: 8px;
+    margin-bottom: 8px;
+}
+
+#feedback-form textarea {
+    resize: vertical; /* Allow vertical resizing of textarea */
+}
+
+#feedback-form button {
+    padding: 8px 16px;
+    background-color: #5b4caf;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+    width: 51%;
+}
+
+#feedback-form button:hover {
+    background-color: #45a049;
 }

@@ -18,7 +18,8 @@ const startupIdeas = [
     "Fitness tracking app with personalized workouts",
     "Investment and financial diversification fund app",
     "Smart home automation system",
-    "Business ideas for entrepreship"
+    "Business ideas for entrepreship",
+    "An app for tracking personal fitness goals"
 ];
 
 // Iterate over the array of startup ideas using the forEach method
@@ -61,7 +62,6 @@ feedbackForm.addEventListener('submit', validateFeedbackForm);
 // Function to generate random startup ideas
 function generateStartupIdeas() {
     const startupIdeas = [
-        'An app for tracking personal fitness goals',
         'A platform for connecting freelance designers with clients',
         'A subscription box service for exotic spices',
         'An online marketplace for handmade crafts',
@@ -89,6 +89,8 @@ const footer = document.querySelector('footer');
 //Modify the styles and/or CSS.....
 // Function to handle idea selection and highlighting
 function selectIdea(event) {
+    console.log('Idea clicked:', event.currentTarget.textContent);
+    
     // Remove the 'selected' class from all ideas
     const allIdeas = document.querySelectorAll('#idea-list li');
     allIdeas.forEach(idea => {
